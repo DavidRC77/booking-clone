@@ -1,4 +1,6 @@
 import { trending_data } from "@/data/trending";
+import SearchForm from "@/components/SearchForm";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
         </h3>
       </section>
       <section className="m-4 mt-0 -mb-14 px-2 lg:px-4">
-        
+        <SearchForm />
       </section>
       <section className="mx-auto max-w-7xl p-6 bg-white 
       rounded-t-lg">
@@ -20,14 +22,16 @@ export default function Home() {
             Most popular choices for travelers from around the world
           </p>
         </div>
-        <div className="flex space-x-4 py-5 overflow-x-scrooll">
+        <div className="flex space-x-4 py-5 overflow-x-scroll">
           {trending_data.map(item => (
             <div key={item.id} className="space-y-1 shrink-0 cursor-pointer">
-              <img
-                key={item.id}b
-                className="w-80 h-72 object-cover rounded-lg p-2"
+              <Image
+                key={item.id}
+                className="w-40 h-52 object-cover rounded-lg p-2"
                 src={item.src}
-                alt=""
+                alt={`${item.title}, ${item.location}`}
+                width={160}
+                height={208}
               />
               <p className="font-bold">{item.title}</p>
               <p className="">{item.location}</p>

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import {
@@ -52,10 +53,12 @@ function Header() {
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className='sr-only'>Booking.com</span>
-                        <img
+                        <Image
                             className="h-12 w-8"
                             src="https://logospng.org/download/booking.com/booking-com-256.png"
-                            alt=""
+                            alt="Booking.com"
+                            width={32}
+                            height={48}
                         />
                     </Link>
                 </div>
@@ -159,15 +162,17 @@ function Header() {
             >
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full 
-                overflow-y-auto bg-[#0134894] px-6 py-6 sm:max-w-sm sm:ring-1 
+                overflow-y-auto bg-[#013894] px-6 py-6 sm:max-w-sm sm:ring-1 
                 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Booking.com</span>
-                            <img
+                            <Image
                                 className="h-8 w-auto"
                                 src="https://logospng.org/download/booking.com/booking-com-256.png"
-                                alt=""
+                                alt="Booking.com"
+                                width={32}
+                                height={32}
                             />
                         </a>
                         <button
