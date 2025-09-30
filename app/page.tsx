@@ -1,7 +1,8 @@
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex min-h-screen flex-col items-center 
+    justify-between">
       <h1>Booking.com clone</h1>
     </main>
   );
