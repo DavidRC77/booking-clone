@@ -1,3 +1,4 @@
+import { trending_data } from "@/data/trending";
 
 export default function Home() {
   return (
@@ -20,6 +21,19 @@ export default function Home() {
           </p>
         </div>
         <div className="flex space-x-4 py-5 overflow-x-scrooll">
+          {trending_data.map(item => (
+            <div key={item.id} className="space-y-1 shrink-0 cursor-pointer">
+              <img
+                key={item.id}b
+                className="w-80 h-72 object-cover rounded-lg p-2"
+                src={item.src}
+                alt=""
+              />
+              <p className="font-bold">{item.title}</p>
+              <p className="">{item.location}</p>
+              <p className="font-light text-sm">{item.description}</p>
+            </div>
+          ))}
         </div>
       </section>
     </main>
